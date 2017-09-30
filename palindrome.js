@@ -10,7 +10,7 @@
         return word == reverseWord
  
     };
-    console.log(isPalindrome('abcdd'))
-    console.log(reverseWord)
-    // let myvar = isPalindrome('racecar')
+    // console.log(isPalindrome('abcdd'))
+    // console.log(reverseWord)
+    module.exports = isPalindrome;
 })()
