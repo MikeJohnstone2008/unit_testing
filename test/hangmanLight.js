@@ -20,10 +20,8 @@ describe('Testing Letter Count', function () {
     });
     context('when the word is apple', function () {
         it('the test will CORRECTLY fail if the expected count of letter p != 3', function () {
-
             let letterCount = hangman('apple', 'p');
             expect(letterCount).to.not.equal(3);
-            // assert.fail(letterCount, 0, 'the test fails by design');
         });
     });
     context('when the word is uppercase MISSISSIPPI', function () {
