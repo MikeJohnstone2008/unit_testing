@@ -19,18 +19,18 @@ describe('Testing Sum of 2 numbers: ', function () {
             expect(sum).to.equal(4);
         });
     });
-    context('when numbers 0 and 4 are added ', function () {
+    context('when numbers a and 5 are added ', function () {
         it('4 is the correct sum returned', function () {
 
-            let sum = sumNumbers(a, 5);
-            assert(sum).fail("requires a number; no letters or special characters");
+            let sum = sumNumbers("a", 5);
+            expect(sum).to.equal("the first value is not a number");
         });
     });
-    context('when non-number "a" and a number 4 are added ', function () {
+    context('when the number 4 and a non-number "a" are added ', function () {
         it('an error msg is returned', function () {
 
-            let sum = sumNumbers(a, 4);
-            assert(sum).equals(4);      /*("requires a number; no letters or special characters"); */
+            let sum = sumNumbers(4, "a");
+            expect(sum).to.equal("the second value is not a number");      /*("requires a number; no letters or special characters"); */
         });
     });
     context('when very large numbers are added ', function () {

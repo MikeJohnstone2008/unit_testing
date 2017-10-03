@@ -4,7 +4,7 @@ let expect = chai.expect;
 let assert = require('assert');
 
 describe('Testing Average', function () {
-    context('when 2,3 and 4 are averaged', function () {
+    context('when integers 2,3 and 4 are averaged', function () {
         it('3 is correctly returned as the average', function () {
             let expectedResult = 3;
             let actualResult = avg(2,3,4);
@@ -30,6 +30,13 @@ describe('Testing Average', function () {
 
             let average = avg(41,-16, -7);
             expect(average).to.equal(6);
+        });
+    });
+    context('when decimal numbers 12.334, 7.00125, 9.999998 are averaged', function () {
+        it('9.778416 is correctly returned as the average', function () {
+
+            let average = avg(12.334, 7.00125, 9.999998);
+            expect(average).to.equal(9.778416);
         });
     });
 });
